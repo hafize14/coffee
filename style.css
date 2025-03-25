@@ -1,0 +1,589 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #dbdbdb;
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.header_content img {
+    height: 80px;
+}
+
+.header_content label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.manager {
+    width: 90px;
+}
+#menuArea{
+	background: #fff200;
+}
+#menuArea ul{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 80%;
+	padding:0;
+	list-style:none;
+	text-align:center;
+	background: #fff200;
+	margin: 0 auto;
+}
+#menuArea li {
+	flex:1;
+	min-width:100px;
+	padding:10px;
+	text-align:center;
+	font-weight:bold;
+}
+#menuArea li:hover {
+	background: ff7f37
+}
+.footer {
+    position: fixed;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    width: 100%;
+    height: 150px;
+    background: #00ffff;
+    bottom: 0;
+    display: flex;
+}
+
+.cartList {
+    display: flex;
+    height: 100%;
+    width: 80%;
+    background: #cccccc;
+    overflow: hidden;
+}
+.cartList ul {
+    display: flex;
+    flex-wrap: nowrap; /* 줄 바꿈 방지 */
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    background: #D9D9D9;
+    overflow-x: auto; /* 가로 스크롤 생성 */
+    white-space: nowrap; /* 줄 바꿈 방지 */
+    scrollbar-width: thin; 
+}
+
+.cartList ul::-webkit-scrollbar {
+    height: 8px; 
+}
+.cartList ul::-webkit-scrollbar-thumb {
+    background: #888; /* 스크롤바 색상 */
+    border-radius: 4px;
+}
+
+.cartList ul::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.cartList li {
+    flex: 0 0 auto;
+    width: 120px;
+    align-items: center;
+    height: 90%;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #000000;
+    background: #fff;
+}
+/* 하단 결제 버튼 */
+.pay {
+    display: flex;
+    width: 20%;
+    min-width: 200px;
+    height: 100%;
+    background-color: #E067E2;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    right: 0px;
+}
+
+.pay:hover {
+    background-color: blue;
+}
+
+.amount {
+    width: 20%;
+    height: 100%;
+    background: #660010;
+}
+.cartProduct {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.cartProductImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cartProductImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.cartProductDel {
+    position: absolute;
+    right: 3px;
+}
+#productList ul {
+    display: flex;
+    width: 100%;
+    margin: 0 auto; /* 가운데 정렬 */
+    overflow-y: auto; /* 세로 스크롤 */
+    flex-wrap: wrap;
+    padding: 0 80px;
+    list-style: none;
+    height: 500px; /* 높이 지정 */
+}
+
+#productList li {
+    width: 25%; /* 한 줄에 4 개씩 배치 */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#productList li:hover {
+    background: #C8EBFA;
+}
+.item.container {
+    text-align: center;
+}
+
+.productImg {
+    text-align: center;
+}
+
+.productImg img {
+    width: 130px;
+    height: 150px;
+}
+
+.productName {
+    text-align: center;
+}
+
+.price {
+    text-align: right;
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Barun Gothic', sans-serif; 
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.header_container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 100vw; 
+    padding: 0;
+    background-color: #dbdbdb; 
+    position: relative; 
+}
+.header_content {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.header_content img {
+    height: 100px; /* Görselin yüksekliği 100px olarak ayarlandı */
+}
+
+.header_content label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px; /* Görsel ile yazı arasındaki boşluk */
+}
+
+.manager {
+    width: 90px;
+    position: absolute;
+    right: 0; /* Sağ tarafta konumlandırma */
+}
+
+#menuArea {
+    background: #fff200; /* Menü alanı için arka plan rengi */
+}
+#menuArea ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    background: #fff200;
+    margin: 0 auto;
+}
+
+#menuArea li {
+    flex: 1;
+    min-width: 100px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#menuArea li:hover {
+    background: #ff7f27; /* Örnek bir hover arka plan rengi */
+}
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; /* left yerine flex-start kullanılması önerilir */
+    padding: 20px;
+}
+
+.productList li {
+    list-style: none;
+    width: 23vw; /* Yüzde yerine viewport width (vw) birimi kullanılıyor */
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.productList li:hover {
+    background: #C8EBFA;
+}
+.item.container {
+    text-align: center; /* container içindeki öğeler ortalanacak */
+}
+
+.productImg {
+    text-align: center; /* resim container'ı da ortalanacak */
+}
+
+.productImg img {
+    width: 130px; /* resim genişliği 130px */
+    height: 150px; /* resim yüksekliği 150px */
+}
+
+.productName {
+    text-align: center; /* ürün adı ortalanacak */
+}
+
+.price {
+    text-align: right; /* fiyat sağa hizalanacak */
+    display: block; /* fiyatın bloğa dönüşmesi sağlanacak */
+}
+.footer {
+    position: fixed; /* footer'ı sabitler */
+    align-items: center; /* dikeyde ortalama */
+    justify-content: center; /* yatayda ortalama */
+    width: 100vw; /* genişlik tam ekran olacak şekilde ayarlandı */
+    height: 150px; /* yükseklik 150px olarak belirlendi */
+    background: #00ffff; /* arka plan rengi cyan */
+    bottom: 0; /* alt kısma yerleştirildi */
+    display: flex; /* flexbox kullanılarak düzen yapıldı */
+}
+
+.cartList {
+    display: flex; /* flexbox düzeni kullanıldı */
+    height: 100%; /* container yüksekliği %100 olacak */
+    width: 80vw; /* genişlik ekran genişliğinin %80'i olacak */
+    background: #cccccc; /* arka plan gri tonlarında */
+    overflow: hidden; /* taşan öğeler gizlendi */
+}
+.cartList ul {
+    display: flex;
+    flex-wrap: nowrap; /* 줄 바꿈 방지 */
+    justify-content: flex-start; /* öğeleri sola hizala */
+    align-items: center; /* öğeleri dikeyde ortala */
+    width: 100vw; /* genişlik tam ekran olacak şekilde ayarlandı */
+    height: 100%; /* yüksekliği %100 olarak ayarlandı */
+    padding: 0; /* padding sıfırlandı */
+    list-style: none; /* liste işaretleri kaldırıldı */
+    text-align: center; /* metin ortalandı */
+    background: #D9D9D9; /* arka plan gri renkte */
+    overflow-x: auto; /* yatayda kaydırma çubuğu ekle */
+    overflow-y: hidden; /* dikey kaydırma çubuğu gizlendi */
+    white-space: nowrap; /* metin ve içerik yatayda kesilmeden devam etsin */
+    scrollbar-width: thin; /* Firefox için ince kaydırma çubuğu */
+}
+
+/* Webkit tarayıcılar için kaydırma çubuğu stil ayarları */
+.cartList ul::-webkit-scrollbar {
+    height: 8px; /* kaydırma çubuğunun yüksekliği */
+}
+
+/* Webkit tarayıcılar için kaydırma çubuğunun hareketli kısmı (thumb) */
+.cartList ul::-webkit-scrollbar-thumb {
+    background: #888; /* kaydırma çubuğu rengi */
+    border-radius: 4px; /* köşe yuvarlama */
+}
+
+/* Webkit tarayıcılar için kaydırma çubuğunun arka planı */
+.cartList ul::-webkit-scrollbar-track {
+    background: #f1f1f1; /* kaydırma çubuğu arka plan rengi */
+}
+.cartList li {
+    flex: 0 0 auto; /* öğelerin genişliğini kendilerine göre ayarla */
+    width: 120px; /* öğe genişliği */
+    align-items: center; /* öğeleri dikeyde ortala */
+    height: 95%; /* yüksekliği %95 olarak ayarla */
+    padding: 5px; /* iç boşluk ekle */
+    margin: 5px; /* dış boşluk ekle */
+    text-align: center; /* metni ortala */
+    font-weight: bold; /* kalın yazı tipi */
+    border: 1px solid #000000; /* siyah kenarlık */
+    background: #fff; /* beyaz arka plan */
+}
+
+/* 하단 결제 버튼 */
+.pay {
+    display: flex; /* esnek kutu düzeni */
+    width: 15vw; /* genişlik %15 görünüm genişliği */
+    height: 100%; /* yüksekliği %100 olarak ayarla */
+    background-color: #E067E2; /* mor renkli arka plan */
+    color: #fff; /* beyaz metin rengi */
+    align-items: center; /* öğeleri dikeyde ortala */
+    justify-content: center; /* öğeleri yatayda ortala */
+    font-size: 30px; /* büyük font boyutu */
+    font-weight: bold; /* kalın yazı tipi */
+    cursor: pointer; /* fare ile üzerine gelindiğinde işaretçi görünümü */
+    right: 0px; /* sağa yasla */
+    padding: 5px 5px; /* iç boşluk */
+    text-align: center; /* metni ortala */
+}
+
+/* .pay hover efekti */
+.pay:hover {
+    background-color: blue; /* hover (fareyle üzerine gelindiğinde) arka plan mavi olur */
+}
+.amount {
+    width: 20vw; /* genişlik %20 görünüm genişliği */
+    height: 100%; /* yüksekliği %100 olarak ayarla */
+    background: #660010; /* koyu kırmızı arka plan rengi */
+}
+.cartList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Öğeleri ortala */
+    gap: 5px; /* Resimler arasındaki boşluğu küçült */
+    max-width: 800px; /* Çok geniş ekranda ortada sabit kalmasını sağlar */
+    margin: 0 auto; /* Sayfanın ortasına al */
+}
+
+
+.cartProduct {
+    display: flex; /* esnek kutu düzeni */
+    height: 100%; /* yüksekliği %100 olarak ayarla */
+    position: relative; /* içinde bulunan öğeleri pozisyonlamak için */
+}
+
+.cartProductImg {
+    position: absolute; /* öğeyi mutlak pozisyonda yerleştir */
+    width: 100%; /* genişliği %100 olarak ayarla */
+    height: 100%; /* yüksekliği %100 olarak ayarla */
+}
+
+.cartProductImg img {
+    width: 100%; /* resmin genişliği %100 */
+    height: 100%; /* resmin yüksekliği %100 */
+}
+
+.cartProductDel {
+    position: absolute; /* öğeyi mutlak pozisyonda yerleştir */
+    right: 3px; /* sağa 3px mesafe bırak */
+    font-size: 15px; /* yazı boyutu 15px */
+}
+.lblPayTxt {
+    display: flex; /* esnek kutu düzeni */
+    text-align: center; /* metni ortala */
+    font-size: 15px; /* yazı boyutu 15px */
+    align-items: center; /* öğeleri dikeyde ortala */
+    height: 30%; /* yükseklik %30 */
+    background: #B84A5B; /* arka plan rengi */
+}
+
+.lblPayAmountTxt {
+    text-align: right; /* metni sağa hizala */
+    padding-right: 5px; /* sağdan 5px boşluk bırak */
+    font-weight: bold; /* kalın yazı tipi */
+    font-size: 28px; /* yazı boyutu 28px */
+    height: 40%; /* yükseklik %40 */
+    background: #B84A5B; /* arka plan rengi */
+}
+
+.lblPayAmountTxt label {
+    width: 100%; /* genişlik %100 */
+    color: #FFF200; /* yazı rengi sarı */
+}
+
+.lblPayCancel {
+    display: flex; /* esnek kutu düzeni */
+    text-align: center; /* metni ortala */
+    font-weight: bold; /* kalın yazı tipi */
+    font-size: 20px; /* yazı boyutu 20px */
+    align-items: center; /* öğeleri dikeyde ortala */
+    height: 30%; /* yükseklik %30 */
+}
+/* 노트북 & 테블릿 가로 해상도 1024px ~ 1279px */
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+    .productList li {
+        width: 23%; /* ürün liste elemanlarının genişliği %23 */
+    }
+}
+
+/* 테블릿 가로 해상도 768px ~ 1023px */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    .productList li {
+        width: 30%; /* ürün liste elemanlarının genişliği %30 */
+    }
+    .lblPayAmountTxt {
+        font-size: 1.5rem; /* yazı boyutunu 1.5rem olarak ayarlama */
+    }
+}
+/* 모바일 가로 & 테블릿 세로 해상도 480px ~ 767px */
+@media all and (min-width: 480px) and (max-width: 767px) {
+    .header_container {
+        flex-direction: column; /* flex yönünü dikey (column) yap */
+        align-items: center; /* öğeleri merkezle */
+    }
+
+    .productList li {
+        width: 45%; /* ürün liste elemanlarının genişliği %45 */
+    }
+
+    .footer {
+        height: 110px; /* footer yüksekliği 110px */
+    }
+
+    .cartList li {
+        width: 90px; /* cartList elemanlarının genişliği 90px */
+    }
+
+    .cartProductDel {
+        right: 0px; /* sağa hizala */
+        font-size: 0.9rem; /* font boyutunu 0.9rem olarak ayarla */
+    }
+
+    .lblPayTxt {
+        font-size: 0.8rem; /* lblPayTxt font boyutunu 0.8rem olarak ayarla */
+    }
+
+    .lblPayAmountTxt {
+        font-size: 0.9rem; /* lblPayAmountTxt font boyutunu 0.9rem olarak ayarla */
+    }
+
+    .lblPayCancel {
+        font-size: 1rem; /* lblPayCancel font boyutunu 1rem olarak ayarla */
+    }
+
+    .pay {
+        width: 20%; /* ödeme butonunun genişliği %20 */
+        font-size: 2.1rem; /* ödeme butonunun yazı boyutunu 2.1rem olarak ayarla */
+    }
+}
+/* 모바일 세로 해상도 ~ 479px */
+@media all and (max-width: 479px) {
+    .header_container {
+        flex-direction: column; /* flex yönünü dikey (column) yap */
+        align-items: center; /* öğeleri merkezle */
+    }
+
+    .header_content img {
+        height: 80px; /* header içerik resminin yüksekliği 80px olarak ayarlandı */
+    }
+
+    .header_content label {
+        font-size: 1rem; /* yazı boyutunu 1rem olarak ayarla */
+        font-weight: bold; /* kalın yazı tipi */
+        margin-left: 5px; /* sol tarafa 5px boşluk */
+    }
+
+    .productList li {
+        width: 90%; /* ürün liste elemanlarının genişliği %90 */
+    }
+
+    .footer {
+        height: 90px; /* footer yüksekliği 90px olarak ayarlandı */
+    }
+
+    .cartList li {
+        width: 70px; /* cartList elemanlarının genişliği 70px olarak ayarlandı */
+    }
+
+    .cartProductDel {
+        right: 0px; /* sağa hizala */
+        font-size: 0.7rem; /* font boyutunu 0.7rem olarak ayarla */
+    }
+
+    .lblPayTxt {
+        font-size: 0.7rem; /* lblPayTxt font boyutunu 0.7rem olarak ayarla */
+    }
+
+    .lblPayAmountTxt {
+        font-size: 0.8rem; /* lblPayAmountTxt font boyutunu 0.8rem olarak ayarla */
+    }
+
+    .lblPayCancel {
+        font-size: 0.8rem; /* lblPayCancel font boyutunu 0.8rem olarak ayarla */
+    }
+
+    .pay {
+        width: 20%; /* ödeme butonunun genişliği %20 */
+        font-size: 1.5rem; /* ödeme butonunun yazı boyutunu 1.5rem olarak ayarla */
+    }
+}
+
+
+
+
